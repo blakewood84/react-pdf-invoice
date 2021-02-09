@@ -1,23 +1,24 @@
-import React, { Fragment } from 'react';
-import {Text, Image, View, StyleSheet } from '@react-pdf/renderer';
+import React from 'react';
+import {View, StyleSheet } from '@react-pdf/renderer';
 import TableHeader from './TableHeader';
 import TableRows from './TableRows';
 
 const styles = StyleSheet.create({
     table_view: {
         width:'100%',
-        marginTop: '20px'
     }
 });
 
-const Table = () => {
+const Table = (props) => {
     return (
         <View style={styles.table_view}>
             <View>
                 <TableHeader />
             </View>
             <View>
-                <TableRows />
+                <TableRows 
+                    invoice_items={props.invoice_items} 
+                />
             </View>
         </View>
     )

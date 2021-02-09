@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {Text, Image, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 const HeaderLeft = () => {
     return(
         <View>
-            <Image style={styles.image} src={require('../../../assets/hukills-logo.png')}></Image>
+            <Image style={styles.image} src={require('./images/hukills-logo.png')}></Image>
             <View style={styles.align_text}>
                 <Text>CCB #49255</Text>
                 <Text>Medford, OR 97504</Text>

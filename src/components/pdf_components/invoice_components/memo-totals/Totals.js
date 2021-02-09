@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import {Text, Image, View, StyleSheet } from '@react-pdf/renderer';
+import React from 'react';
+import {Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     totals_view: {
@@ -33,28 +33,33 @@ const styles = StyleSheet.create({
     }
 });
 
-const Totals = () => {
+const Totals = (props) => {
     return (
         <View style={styles.totals_view}>
             <View style={styles.row}>
                 <Text style={styles.sub_total_text}>Subtotal: </Text>
-                <Text style={styles.price_text}>$1,500</Text>
+                {/* <Text style={styles.price_text}>${props.sub_total}</Text> */}
+                <Text style={styles.price_text}>$4654.00</Text>
             </View>
             <View style={styles.row}>
                 <Text style={styles.sub_total_text}>Tax (15%): </Text>
-                <Text style={styles.price_text}>$254.38</Text>
+                {/* <Text style={styles.price_text}>${props.tax_total}</Text> */}
+                <Text style={styles.price_text}>$4654.00</Text>
             </View>
             <View style={styles.row_grand_total}>
                 <Text style={styles.sub_total_text}>GRAND TOTAL: </Text>
-                <Text style={styles.price_text}>$1754.38</Text>
+                {/* <Text style={styles.price_text}>${props.grand_total}</Text> */}
+                <Text style={styles.price_text}>$4654.00</Text>
             </View>
             <View style={styles.row}>
                 <Text style={styles.sub_total_text}>Paid: </Text>
-                <Text style={styles.price_text}>$1754.38</Text>
+                {/* <Text style={styles.price_text}>${props.paid}</Text> */}
+                <Text style={styles.price_text}>$4654.00</Text>
             </View>
             <View style={styles.row}>
                 <Text style={styles.sub_total_text}>Balance: </Text>
-                <Text style={styles.price_text}>$0.00</Text>
+                {/* <Text style={styles.price_text}>${props.balance}</Text> */}
+                <Text style={styles.price_text}>$4654.00</Text>
             </View>
         </View>
     )

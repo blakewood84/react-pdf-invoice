@@ -70,12 +70,7 @@ const styles = StyleSheet.create({
   });
 
   const Report = ({report}) => (
-            <Document>
-                <Page size="A4" style={styles.page}>
-                    <ReportTitle title={report.title} subtitle={report.subtitle}/>
-                    <View style={styles.invoiceNoContainer}>
-                        <Text style={styles.invoiceDate}>{report.daterange}</Text>
-                    </View >
+            <View>
                     <Table
                     data={[
                         {date: "8-11-2020", scale: "8555", county: "8555/A62352", mixed: "", oak: "9.702", aspen: "", bass: "", bonus: "$2.00", price: "$105.00", total: "$1,018.71"},
@@ -141,8 +136,7 @@ const styles = StyleSheet.create({
                     </Table>
                     
                     <ReportItemsTable report={report} />
-                </Page>
-            </Document>
+                </View>
         );
 
   export default Report

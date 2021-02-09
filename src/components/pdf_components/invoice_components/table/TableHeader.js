@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
-import {Text, Image, View, StyleSheet } from '@react-pdf/renderer';
+import React from 'react';
+import {Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     table_header_view: {
-        marginTop: '20px',
         width:'100%',
         display: 'flex',
         flexDirection: 'row',
@@ -14,16 +13,16 @@ const styles = StyleSheet.create({
         padding: '5px'
     },
     col1: { // Items
-        width: '50%',
+        width: '63%',
     },
     col2: { // Qty
-        width: '10%',
+        width: '7%',
     },
     col3: { // Price
-        width: '20%',
+        width: '15%',
     },
     col4: { // Total
-        width: '20%',
+        width: '15%',
     }
 });
 

@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import {Text, Image, View, StyleSheet, Note } from '@react-pdf/renderer';
+import React from 'react';
+import {Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
     invoice_view: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const HeaderRight = () => {
+const HeaderRight = (props) => {
     return (
         <View style={styles.invoice_view}>
             <View style={styles.invoice_row}>
@@ -35,15 +35,18 @@ const HeaderRight = () => {
             </View>
             <View style={styles.row}>
                 <Text style={styles.sub_title}>DATE:</Text>
-                <Text style={styles.sub_text}>07/28/20</Text>
+                {/* <Text style={styles.sub_text}>{props.date_created}</Text> */}
+                <Text style={styles.sub_text}>01/22/22</Text>
             </View>
             <View style={styles.row}>
                 <Text style={styles.sub_title}>DUE DATE:</Text>
-                <Text style={styles.sub_text}>07/28/20</Text>
+                {/* <Text style={styles.sub_text}>{props.due_date}</Text> */}
+                <Text style={styles.sub_text}>01/22/22</Text>
             </View>
             <View style={styles.row}>
                 <Text style={styles.sub_title}>INVOICE NO.</Text>
-                <Text style={styles.sub_text}>003</Text>
+                {/* <Text style={styles.sub_text}>{props.invoice_id}</Text> */}
+                <Text style={styles.sub_text}>54654</Text>
             </View>
         </View>
     )

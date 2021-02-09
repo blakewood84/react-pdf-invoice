@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import {Text, Image, View, StyleSheet } from '@react-pdf/renderer';
+import React from 'react';
+import {View, StyleSheet } from '@react-pdf/renderer';
 import HeaderLeft from './HeaderLeft';
 import HeaderRight from './HeaderRight';
 
@@ -12,11 +12,15 @@ const styles = StyleSheet.create({
     }
 })
 
-const Header = () => {
+const Header = (props) => {
     return (
         <View style={styles.align}>
             <HeaderLeft />
-            <HeaderRight />
+            <HeaderRight 
+                invoice_id={props.invoice_id} 
+                due_date={props.due_date} 
+                date_created={props.date_created}
+             />
         </View>
     )
 }
